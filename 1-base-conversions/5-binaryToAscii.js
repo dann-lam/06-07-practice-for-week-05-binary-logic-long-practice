@@ -22,7 +22,15 @@ const binaryStringToArray = str => {
 };
 
 const binaryToAscii = str => {
-  // Your code here
+  //Loop through the array.
+  //Convert every object in the array to ASCII
+
+  let resString = ''
+  let resArr = binaryStringToArray(str)
+  for(let i = 0; i < resArr.length; i++){
+    resString += String.fromCharCode(parseInt(resArr[i], 2))
+  }
+  return resString
 };
 
 /******************************************************************************/
