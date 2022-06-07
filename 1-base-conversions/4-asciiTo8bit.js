@@ -7,8 +7,29 @@ const addZeros = require('../utils/addZeros');
 /******************************************************************************/
 
 const asciiTo8bit = str => {
-  // Your code here
+    const charCodes = [];
+    let res = ""
+
+    for (let i = 0; i < str.length; i++) {
+        const charCode = str[i].charCodeAt().toString();
+        let number = parseInt(charCode)
+        let binarystring = number.toString(2)
+
+        binarystring = addZeros(binarystring, 8)
+        res += binarystring
+        // console.log(number)
+        // console.log(charCode);
+        // charCodes.push(charCode);
+    }
+
+    // for (let i = 0; i < charCodes.length; i++) {
+    //   res += charCodes[i].toString(2)
+    //   // console.log(res)
+    // }
+
+    return res;
 };
+
 
 /******************************************************************************/
 
