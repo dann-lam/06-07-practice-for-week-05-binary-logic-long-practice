@@ -3,7 +3,19 @@
 /******************************************************************************/
 
 const convertToBase10 = str => {
-  // Your code here
+  //We feed in a binary number with the thing still on it.\
+  //We need to "chop" off the first 2 things.
+  // praseInt that Number to base 10.
+  //IF the first 2 strings 0b THEN I do bottom,
+  //else it's a hexicimal and I convert with 16.
+  if(str[1] === 'b'){
+    operation = 2
+  } else {
+    operation = 16
+  }
+  let base = str.slice(2)
+
+  return parseInt(base, operation)
 };
 
 /******************************************************************************/
